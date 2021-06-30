@@ -1,0 +1,91 @@
+.features-list {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.features-list-item {
+  @media screen and (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    margin-bottom: 30px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 3rem) / 2);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: calc((100% - 9rem) / 4);
+  }
+}
+
+.features-list-item::after {
+  content: '';
+  background-color: #f1eee9;
+
+  margin-top: 30px;
+
+  width: 70px;
+  height: 3px;
+
+  transition: background 250ms linear;
+
+  .features-list-item:hover &,
+  .features-list-item:focus & {
+    background-color: #c7b299;
+  }
+}
+
+.features-icon {
+  fill: #555555;
+  transition: fill 250ms linear;
+  margin-bottom: 30px;
+  .features-list-item:hover &,
+  .features-list-item:focus & {
+    fill: #c7b299;
+  }
+}
+
+.features-cars-title {
+  color: #555555;
+  font-family: 'Raleway';
+  font-size: 22px;
+  font-weight: 400;
+
+  transition: color 250ms linear;
+
+  .features-list-item:hover &,
+  .features-list-item:focus & {
+    color: #c7b299;
+  }
+}
+
+.features-cars-description {
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: block;
+    color: #8c8c8c;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 24px;
+
+    margin-top: 20px;
+  }
+}
