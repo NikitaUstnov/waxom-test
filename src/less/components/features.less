@@ -1,13 +1,18 @@
 .features-list {
+  margin-bottom: 30px;
   @media screen and (min-width: 768px) {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    margin-bottom: 80px;
   }
 }
 
 .features-list-item {
   @media screen and (max-width: 767px) {
+    position: relative;
+
     display: flex;
     flex-direction: column;
 
@@ -20,11 +25,15 @@
   }
 
   @media screen and (min-width: 768px) {
+    position: relative;
+
     width: calc((100% - 3rem) / 2);
 
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    cursor: pointer;
 
     margin-bottom: 30px;
   }
@@ -34,27 +43,32 @@
   }
 }
 
-.features-list-item::after {
-  content: '';
-  background-color: #f1eee9;
+.features-list-item:after {
+  display: none;
+  @media screen and (min-width: 768px) {
+    content: ' ';
+    display: block;
+    position: absolute;
+    bottom: 0;
 
-  margin-top: 30px;
+    background-color: #555555;
 
-  width: 70px;
-  height: 3px;
+    width: 70px;
+    height: 3px;
 
-  transition: background 250ms linear;
-
-  .features-list-item:hover &,
-  .features-list-item:focus & {
-    background-color: #c7b299;
+    transition: background 250ms;
   }
+}
+
+.features-list-item:hover::after {
+  background-color: #c7b299;
 }
 
 .features-icon {
   fill: #555555;
   transition: fill 250ms linear;
   margin-bottom: 30px;
+
   .features-list-item:hover &,
   .features-list-item:focus & {
     fill: #c7b299;
@@ -87,5 +101,6 @@
     line-height: 24px;
 
     margin-top: 20px;
+    margin-bottom: 30px;
   }
 }
