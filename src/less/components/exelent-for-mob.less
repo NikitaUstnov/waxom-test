@@ -1,0 +1,128 @@
+.exellent-wrapper {
+  display: flex;
+
+  margin-top: 80px;
+}
+
+.exellent-photo {
+  display: none;
+
+  @media screen and (min-width: 1280px) {
+    display: block;
+    width: 100%;
+  }
+}
+
+.exellent-content {
+  @media screen and (min-width: 768px) {
+    margin-left: 30px;
+  }
+}
+
+.header-exellent {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  text-align: center;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 40px;
+    text-align: left;
+  }
+
+  @media screen and (min-width: 1280px) {
+    margin-top: 110px;
+  }
+}
+
+.section-global-description {
+  margin-bottom: 45px;
+  text-align: left;
+}
+
+.exellent-list {
+  margin-bottom: 40px;
+  @media screen and (min-width: 768px) {
+    margin-left: 50px;
+  }
+}
+
+.exellent-list-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  margin-bottom: 12px;
+
+  color: #8c8c8c;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.exellent-list-item svg {
+  margin-right: 15px;
+  @media screen and (min-width: 768px) {
+    margin-right: 30px;
+  }
+}
+.exxelent-footer {
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: block;
+    background-color: #f4f5f8;
+    background-image: linear-gradient(to right, #211b19 0%, #4e3427 100%);
+  }
+}
+
+.exellent-container-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  padding-bottom: 60px;
+  padding-top: 40px;
+}
+.exellent-list-footer-item {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding-bottom: 30px;
+
+  width: calc((100% - 120px) / 5);
+}
+
+.exellent-list-footer-item::after {
+  content: ' ';
+
+  position: absolute;
+
+  bottom: 0;
+  width: 30px;
+  height: 2px;
+  background-color: #ffffff;
+}
+
+.exellent-list-footer-item svg {
+  margin-bottom: 30px;
+}
+
+.counter {
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 36px;
+
+  margin-bottom: 20px;
+}
+
+.exxelent-footer-item-description {
+  color: #c7b299;
+
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
